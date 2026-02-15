@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artes & Pedras Silva | Beleza e Qualidade em Pedras</title>
+    <link rel="icon" href="Imagens/Logo Artes e Pedras.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Adicionando FontAwesome para os ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary-dark: #3e3a37; /* Dark bronze from logo */
@@ -48,11 +51,40 @@
             letter-spacing: 1px;
             transition: all 0.3s ease;
             border: 2px solid var(--accent-warm);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem; /* Espaço entre ícone e texto */
         }
 
             .btn-elegant:hover {
                 background-color: transparent;
                 color: var(--accent-warm);
+            }
+
+        /* Estilos específicos para os botões de contato com cores de marca */
+        .btn-whatsapp-custom {
+            background-color: white;
+            color: var(--primary-dark);
+            border-color: white;
+        }
+
+            .btn-whatsapp-custom:hover {
+                background-color: #25D366 !important; /* Verde WhatsApp */
+                border-color: #25D366 !important;
+                color: white !important;
+            }
+
+        .btn-instagram-custom {
+            background-color: transparent;
+            color: white;
+            border-color: white;
+        }
+
+            .btn-instagram-custom:hover {
+                background-color: #833AB4 !important; /* Roxo Instagram */
+                border-color: #833AB4 !important;
+                color: white !important;
             }
 
         .section-bg-warm {
@@ -98,7 +130,7 @@
         <div class="container mx-auto px-6 flex justify-between items-center">
             <a href="#inicio" class="flex items-center">
                 <!-- Logo Aumentada e Barra Reduzida -->
-                <img src="Imagens/Logo transparente Artes e Pedras.png" alt="Artes & Pedras Logo" class="h-28 md:h-40 w-auto object-contain transition-all scale-110 origin-left">
+                <img src="Imagens/Logo transparente Artes e Pedras.png" alt="Artes & Pedras Logo" class="h-28 md:h-40 w-auto object-contain transition-all scale-150 origin-left">
             </a>
 
             <!-- Menu Desktop -->
@@ -158,7 +190,7 @@
             </div>
             <div class="relative">
                 <!-- Mantendo a colagem original -->
-                <img src="image_2.png" alt="Colagem de Obras em Pedra" class="rounded-sm shadow-xl border-4 border-white">
+                <img src="Imagens/Portifolio/Colagem de Obras em Pedras.png" class="rounded-sm shadow-xl border-4 border-white w-full h-[500px] object-cover">
             </div>
         </div>
     </section>
@@ -175,14 +207,14 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- User's Real Images -->
                 <div class="portfolio-item h-80">
-                    <img src="image_00d8de.jpg" class="w-full h-full object-cover" alt="Obra Real - Fachada">
+                    <img src="Imagens/Portifolio/calçada com caminho para cego.png" class="w-full h-full object-cover" alt="Obra Real - Fachada">
                     <div class="portfolio-overlay">
                         <h3 class="text-2xl font-serif-title text-white mb-2">Revestimentos</h3>
                         <p class="text-sm uppercase tracking-wider">Beleza Natural</p>
                     </div>
                 </div>
                 <div class="portfolio-item h-80">
-                    <img src="image_1.png" class="w-full h-full object-cover" alt="Obra Real - Caminho">
+                    <img src="Imagens/Portifolio/calçada com arvores.png" class="w-full h-full object-cover" alt="Obra Real - Caminho">
                     <div class="portfolio-overlay">
                         <h3 class="text-2xl font-serif-title text-white mb-2">Pavimentação</h3>
                         <p class="text-sm uppercase tracking-wider">Durabilidade</p>
@@ -190,28 +222,28 @@
                 </div>
                 <!-- Generated Illustrative Images (Cropped from collage) -->
                 <div class="portfolio-item h-80">
-                    <img src="image_2.png" class="w-full h-full object-cover object-left-top" alt="Parede de Pedra">
+                    <img src="Imagens/Portifolio/Muro em pedras.png" class="w-full h-full object-cover object-left-top" alt="Parede de Pedra">
                     <div class="portfolio-overlay">
                         <h3 class="text-2xl font-serif-title text-white mb-2">Fachadas</h3>
                         <p class="text-sm uppercase tracking-wider">Textura Nobre</p>
                     </div>
                 </div>
                 <div class="portfolio-item h-80">
-                    <img src="image_2.png" class="w-full h-full object-cover object-center" alt="Caminho de Pedras">
+                    <img src="Imagens/Portifolio/parade em basalto.png" class="w-full h-full object-cover object-center" alt="Caminho de Pedras">
                     <div class="portfolio-overlay">
                         <h3 class="text-2xl font-serif-title text-white mb-2">Paisagismo</h3>
                         <p class="text-sm uppercase tracking-wider">Harmonia</p>
                     </div>
                 </div>
                 <div class="portfolio-item h-80">
-                    <img src="image_2.png" class="w-full h-full object-cover object-right-top" alt="Área de Lazer">
+                    <img src="Imagens/Portifolio/calçada com piscina.png" class="w-full h-full object-cover object-right-top" alt="Área de Lazer">
                     <div class="portfolio-overlay">
                         <h3 class="text-2xl font-serif-title text-white mb-2">Áreas Externas</h3>
                         <p class="text-sm uppercase tracking-wider">Conforto</p>
                     </div>
                 </div>
                 <div class="portfolio-item h-80">
-                    <img src="image_00d8de.jpg" class="w-full h-full object-cover object-bottom" alt="Obra Real - Detalhe">
+                    <img src="Imagens/Portifolio/arte da pedra em estrela.png" class="w-full h-full object-cover object-bottom" alt="Obra Real - Detalhe">
                     <div class="portfolio-overlay">
                         <h3 class="text-2xl font-serif-title text-white mb-2">Acabamentos</h3>
                         <p class="text-sm uppercase tracking-wider">Precisão</p>
@@ -228,10 +260,14 @@
             <div class="logo-divider" style="border-color: white;"></div>
             <p class="text-xl mb-12 max-w-2xl mx-auto">Solicite um orçamento e descubra como podemos transformar seu espaço com a perenidade da pedra.</p>
             <div class="flex flex-col md:flex-row justify-center gap-6">
-                <a href="#" class="btn-elegant bg-white text-[var(--primary-dark)] border-white hover:bg-transparent hover:text-white">
+                <!-- Botão WhatsApp: Branco -> Verde no Hover -->
+                <a href="https://wa.me/5554991179107" target="_blank" class="btn-elegant btn-whatsapp-custom">
+                    <i class="fab fa-whatsapp text-xl"></i>
                     WhatsApp do Charles
                 </a>
-                <a href="https://www.instagram.com/artepedras_silva/" target="_blank" class="btn-elegant bg-transparent border-white hover:bg-white hover:text-[var(--primary-dark)]">
+                <!-- Botão Instagram: Transparente -> Roxo no Hover -->
+                <a href="https://www.instagram.com/artepedras_silva/" target="_blank" class="btn-elegant btn-instagram-custom">
+                    <i class="fab fa-instagram text-xl"></i>
                     Ver Instagram
                 </a>
             </div>
@@ -239,11 +275,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 text-center">
-        <div class="container mx-auto px-6">
-            <img src="image_00d8a3.png" alt="Artes & Pedras Logo" class="h-16 mx-auto mb-6">
-            <p class="text-sm font-semibold uppercase tracking-wider text-[var(--primary-dark)]">
-                © 2024 Artes & Pedras Silva. Todos os direitos reservados.
+    <footer class="py-12">
+        <div class="container mx-auto px-6 flex flex-col items-center">
+            <!-- Alinhamento central forçado -->
+            <img src="Imagens/Logo transparente Artes e Pedras.png" alt="Artes & Pedras Logo" class="h-28 md:h-40 w-auto object-contain transition-all scale-150">
+            <p class="text-sm font-semibold uppercase tracking-wider text-[var(--primary-dark)] text-center">
+                © 2026 Artes & Pedras Silva. Todos os direitos reservados.
             </p>
         </div>
     </footer>
