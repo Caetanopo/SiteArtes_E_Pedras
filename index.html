@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artes & Pedras Silva | Beleza e Qualidade em Pedras</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #3e3a37; /* Dark bronze from logo */
+            --accent-warm: #a65e2e; /* Warm terracotta from stones */
+            --bg-light: #f4f1ea; /* Light beige background */
+            --text-body: #5a5a5a;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-body);
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, .font-serif-title {
+            font-family: 'Cinzel', serif;
+            color: var(--primary-dark);
+        }
+
+        .logo-divider {
+            border-top: 3px double var(--primary-dark);
+            width: 60px;
+            margin: 1.5rem auto;
+        }
+
+        /* --- ÁREA DE TESTE: SESSÃO HERO --- */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('Imagens/teste_fundo basalto.jpg'); /* Generated Image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .btn-elegant {
+            background-color: var(--accent-warm);
+            color: white;
+            padding: 1rem 2.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent-warm);
+        }
+
+            .btn-elegant:hover {
+                background-color: transparent;
+                color: var(--accent-warm);
+            }
+
+        .section-bg-warm {
+            background-color: #e9e4da;
+            /* Voltando ao original: apenas cor sólida, sem imagem de fundo */
+        }
+
+        .portfolio-item {
+            overflow: hidden;
+            position: relative;
+        }
+
+            .portfolio-item img {
+                transition: transform 0.5s ease;
+            }
+
+            .portfolio-item:hover img {
+                transform: scale(1.05);
+            }
+
+        .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(62, 58, 55, 0.7);
+            display: flex;
+            flex-col: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: white;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Nav -->
+    <nav class="fixed w-full z-50 bg-white/95 shadow-md transition-all py-1">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#inicio" class="flex items-center">
+                <!-- Logo Aumentada e Barra Reduzida -->
+                <img src="Imagens/Logo transparente Artes e Pedras.png" alt="Artes & Pedras Logo" class="h-28 md:h-40 w-auto object-contain transition-all scale-110 origin-left">
+            </a>
+
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-wider text-[var(--primary-dark)] items-center">
+                <a href="#inicio" class="hover:text-[var(--accent-warm)] transition">Início</a>
+                <a href="#sobre" class="hover:text-[var(--accent-warm)] transition">Sobre Nós</a>
+                <a href="#portfoliio" class="hover:text-[var(--accent-warm)] transition">Portfólio</a>
+                <a href="#contato" class="hover:text-[var(--accent-warm)] transition">Contato</a>
+            </div>
+
+            <!-- Botão Mobile -->
+            <button id="mobile-menu-btn" class="md:hidden text-[var(--primary-dark)] focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu Mobile (Escondido por padrão) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 top-full shadow-lg">
+            <div class="flex flex-col px-6 py-4 space-y-4 text-center text-sm font-bold uppercase tracking-wider text-[var(--primary-dark)]">
+                <a href="#inicio" class="block hover:text-[var(--accent-warm)] py-2 border-b border-gray-100">Início</a>
+                <a href="#sobre" class="block hover:text-[var(--accent-warm)] py-2 border-b border-gray-100">Sobre Nós</a>
+                <a href="#portfoliio" class="block hover:text-[var(--accent-warm)] py-2 border-b border-gray-100">Portfólio</a>
+                <a href="#contato" class="block hover:text-[var(--accent-warm)] py-2">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="inicio" class="hero-section h-screen flex items-center justify-center text-center px-6">
+        <div class="max-w-4xl pt-20">
+            <!-- Adicionado pt-20 para compensar a navbar fixa -->
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight font-serif-title">
+                BELEZA E QUALIDADE <br> EM PEDRAS
+            </h1>
+            <div class="logo-divider" style="border-color: white;"></div>
+            <p class="text-xl md:text-2xl text-gray-100 max-w-2xl mx-auto mb-10 font-medium">
+                Transformamos ambientes com a nobreza e a durabilidade das pedras naturais. Um legado de excelência em cada detalhe.
+            </p>
+            <a href="#contato" class="btn-elegant">Solicitar Orçamento</a>
+        </div>
+    </header>
+
+    <!-- About / The Master -->
+    <section id="sobre" class="py-24 section-bg-warm">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-serif-title mb-6">MAIS DE 50 ANOS DE HISTÓRIA</h2>
+                <div class="logo-divider mx-0"></div>
+                <p class="text-lg leading-relaxed mb-6">
+                    A <strong class="text-[var(--primary-dark)]">Artes & Pedras Silva</strong> atua no ramo há mais de 50 anos. O que começou como um ofício tornou-se uma tradição familiar, passando o conhecimento e a técnica <strong>de pai para filho</strong>.
+                </p>
+                <p class="text-lg leading-relaxed">
+                    Trabalhamos com todo tipo de pedra e revestimento. Para nós, isso não é apenas um trabalho, é um <strong>legado</strong>. Cada obra carrega a experiência de gerações, garantindo um resultado que une a força da tradição com a beleza do acabamento.
+                </p>
+            </div>
+            <div class="relative">
+                <!-- Mantendo a colagem original -->
+                <img src="image_2.png" alt="Colagem de Obras em Pedra" class="rounded-sm shadow-xl border-4 border-white">
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section id="portfoliio" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif-title">NOSSO PORTFÓLIO</h2>
+                <div class="logo-divider"></div>
+                <p class="text-lg max-w-xl mx-auto">Uma seleção de obras que exemplificam nossa dedicação à beleza e à qualidade.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- User's Real Images -->
+                <div class="portfolio-item h-80">
+                    <img src="image_00d8de.jpg" class="w-full h-full object-cover" alt="Obra Real - Fachada">
+                    <div class="portfolio-overlay">
+                        <h3 class="text-2xl font-serif-title text-white mb-2">Revestimentos</h3>
+                        <p class="text-sm uppercase tracking-wider">Beleza Natural</p>
+                    </div>
+                </div>
+                <div class="portfolio-item h-80">
+                    <img src="image_1.png" class="w-full h-full object-cover" alt="Obra Real - Caminho">
+                    <div class="portfolio-overlay">
+                        <h3 class="text-2xl font-serif-title text-white mb-2">Pavimentação</h3>
+                        <p class="text-sm uppercase tracking-wider">Durabilidade</p>
+                    </div>
+                </div>
+                <!-- Generated Illustrative Images (Cropped from collage) -->
+                <div class="portfolio-item h-80">
+                    <img src="image_2.png" class="w-full h-full object-cover object-left-top" alt="Parede de Pedra">
+                    <div class="portfolio-overlay">
+                        <h3 class="text-2xl font-serif-title text-white mb-2">Fachadas</h3>
+                        <p class="text-sm uppercase tracking-wider">Textura Nobre</p>
+                    </div>
+                </div>
+                <div class="portfolio-item h-80">
+                    <img src="image_2.png" class="w-full h-full object-cover object-center" alt="Caminho de Pedras">
+                    <div class="portfolio-overlay">
+                        <h3 class="text-2xl font-serif-title text-white mb-2">Paisagismo</h3>
+                        <p class="text-sm uppercase tracking-wider">Harmonia</p>
+                    </div>
+                </div>
+                <div class="portfolio-item h-80">
+                    <img src="image_2.png" class="w-full h-full object-cover object-right-top" alt="Área de Lazer">
+                    <div class="portfolio-overlay">
+                        <h3 class="text-2xl font-serif-title text-white mb-2">Áreas Externas</h3>
+                        <p class="text-sm uppercase tracking-wider">Conforto</p>
+                    </div>
+                </div>
+                <div class="portfolio-item h-80">
+                    <img src="image_00d8de.jpg" class="w-full h-full object-cover object-bottom" alt="Obra Real - Detalhe">
+                    <div class="portfolio-overlay">
+                        <h3 class="text-2xl font-serif-title text-white mb-2">Acabamentos</h3>
+                        <p class="text-sm uppercase tracking-wider">Precisão</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section id="contato" class="py-24 bg-[var(--primary-dark)] text-center text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-serif-title text-white mb-8">VAMOS CONVERSAR SOBRE SEU PROJETO?</h2>
+            <div class="logo-divider" style="border-color: white;"></div>
+            <p class="text-xl mb-12 max-w-2xl mx-auto">Solicite um orçamento e descubra como podemos transformar seu espaço com a perenidade da pedra.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="#" class="btn-elegant bg-white text-[var(--primary-dark)] border-white hover:bg-transparent hover:text-white">
+                    WhatsApp do Charles
+                </a>
+                <a href="https://www.instagram.com/artepedras_silva/" target="_blank" class="btn-elegant bg-transparent border-white hover:bg-white hover:text-[var(--primary-dark)]">
+                    Ver Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center">
+        <div class="container mx-auto px-6">
+            <img src="image_00d8a3.png" alt="Artes & Pedras Logo" class="h-16 mx-auto mb-6">
+            <p class="text-sm font-semibold uppercase tracking-wider text-[var(--primary-dark)]">
+                © 2024 Artes & Pedras Silva. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Script para o Menu Mobile -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

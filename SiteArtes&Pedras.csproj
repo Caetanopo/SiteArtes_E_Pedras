@@ -7,4 +7,8 @@
     <RootNamespace>SiteArtes_Pedras</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Imagens\" />
+  </ItemGroup>
+
 </Project>
